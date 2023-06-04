@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript lab 1-3</title>
+
+    
+
+    <style>
+        body, html {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+
+        .font_style {
+            font-family: Georgia, serif;
+            font-size: 50px;
+            letter-spacing: 5px;
+            word-spacing: 6px;
+            color: #ffffff;
+            font-weight: 500;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: small-caps;
+            text-transform: capitalize;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+
+    <script>
+        function sort() {
+            const datas = document.getElementById("data").value;
+            const numbers = datas.split(",").map(Number);
+
+            // average
+            var total = 0;
+            for (var i = 0 ; i < numbers.length ; i ++){
+                total += parseInt(numbers[i]);
+            }
+            var avg = total / (numbers.length);
+
+            // sort 
+            for (var i = 0 ; i < numbers.length - 1 ; i ++){
+                for (var j = i + 1 ; j < numbers.length ; j ++){
+                    if (parseInt(numbers[i]) > parseInt(numbers[j])){
+                        var temp = numbers[i];
+                        numbers[i] = numbers[j];
+                        numbers[j] = temp;
+                    }
+                }
+            }
+
+            document.getElementById("max_value").innerHTML = "Max : " + numbers[numbers.length - 1];
+            document.getElementById("min_value").innerHTML = "Min : " + numbers[0];
+            document.getElementById("avg_value").innerHTML = "Avg : " + avg.toFixed(2);
+            document.getElementById("sort_text").innerHTML = "Sort Result";
+            
+            var result = "";
+            for (var i = 0 ; i < numbers.length ; i ++){
+                if (i == 0){
+                    result = result + numbers[i];
+                }
+                else {
+                    result = result + " < " + numbers[i];
+                }
+            }
+
+            document.getElementById("sort_value").innerHTML = result;
+
+        }
+    </script>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+</head>
+<body id="vanta_bg">   
+    <div class="container">
+        <div class="row" style="margin-bottom: 50px;">
+            <div class="col">
+                <h1 class="font_style">Input Your Integer Numbers</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <div class="input-group">
+                    <span class="input-group-text">Numbers</span>
+                    <input id="data" type="text" class="form-control" placeholder="1,2,3,4..."/>
+                </div>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" onclick="sort()">Calculate</button>
+            </div>
+        </div>
+
+        <!-- result  -->
+        <div class="row" style="margin-top: 50px;">
+            <div class="col font_style" id="max_value">
+           
+            </div>
+            <div class="col font_style" id="min_value">
+            
+            </div>
+            <div class="col font_style" id="avg_value">
+            
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 30px;">
+            <div class="col font_style" id="sort_text">
+         
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col font_style" style="font-size: 30px;" id="sort_value">
+              
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    
+    
+
+
+    <!-- Dynamic BG  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+    VANTA.NET({
+    el: "#vanta_bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x3fa4ff
+    })
+    </script>
+
+    <!-- Bootstrap js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>

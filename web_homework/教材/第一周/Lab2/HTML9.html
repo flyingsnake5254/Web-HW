@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML9</title>
+  <style>
+    h1{
+      display: block;               /*設定為區塊性*/
+      font-size: 2em;               /*字體大小*/
+      margin-bottom: 0.67em;        /*距離下面元素距離*/
+      font-weight: bold;            /*字體粗度*/
+    }
+    header{
+      background-color: #3FD5BA;    /*背景顏色*/
+      margin-bottom: 20px;
+    }
+    nav ul{                         /*nav底下的ul*/
+      background-color: rgba(198, 255, 245, 0.35);
+    }
+    nav li{                         /*nav底下的li*/
+      margin-right: 50px;           /*距離右邊多少距離*/
+      display: inline;              /*設定為在同一水平線*/
+    }
+    aside{
+     background-color: #7CC8EC;
+     float: left;                   /*浮動位置*/
+     width: 15%;                    /*寬度*/
+     height: 235px;                 /*高度*/
+    }
+    aside p{                            /*aside底下的p*/
+      border-bottom: 1px solid #000000; /*底部框線，solid實心的線*/
+    }
+    footer{
+      background-color: #F9D35E;
+      clear: both;                  //123
+      padding-top: 15px;            /*文字距離上方邊寬的距離*/
+      padding-bottom: 15px;         /*文字距離下方邊寬的距離*/
+      text-align: center;           /*字體對齊*/
+    }
+    article{
+      background-color: #F57164;
+      margin-bottom: 15px;
+      border: 1px solid #000000;
+      float: right;
+      width: 83%;
+    }
+  </style>
+</head>
+
+<body>
+  <header> 
+    <h1>Header</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Nav</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside>
+    <p>item 1</p>
+    <p>item 2</p>
+    <p>item 3</p>
+    <p>item 4</p>
+    <p>item 5</p>
+    <p>item 6</p>
+  </aside>
+
+    <article>
+      <h2>article 1</h2>
+      <p>HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages. Along with CSS, and JavaScript</p>
+    </article>
+
+    <article>
+      <h2>article 2</h2>
+      <p>HTML is a cornerstone technology, used by most websites to create visually engaging webpages</p>
+    </article>
+
+    <footer>
+      <p>Copyright &copy; 2015 <a href="http://www.stu.edu.tw/">Shu-Te University Computer Science &amp; Information Engineering</a>. All rights reserved.</p>
+    </footer>
+</body>
+</html>

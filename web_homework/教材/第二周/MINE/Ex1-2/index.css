@@ -1,0 +1,54 @@
+body{
+    background-image: url(bg.jpg);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+ /* Google chrome */
+ @-webkit-keyframes svg-text-anim {
+    40% {
+       stroke-dashoffset: 0;
+       fill: transparent;
+     }
+     60% {
+       stroke-dashoffset: 0;
+       fill: #a7a8a9;
+     }
+     100% {
+       stroke-dashoffset: 0;
+       fill: #a7a8a9;
+     }
+     
+ }
+
+.table_title{
+    margin: 20px;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    letter-spacing: 5px;
+    word-spacing: 6px;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+
+.table_font {
+    margin: 20px;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    word-spacing: 6px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    text-align: center;
+}

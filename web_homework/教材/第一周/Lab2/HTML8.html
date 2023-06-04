@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML8</title>
+</head>
+<body>
+  <form action="" method="get"> <!-- 表單傳送方式為GET -->
+    <fieldset> <!-- 將底下的元素框起來 -->
+      <legend>問卷調查:</legend> <!-- legend是fieldset的標題 -->
+      <label>姓名: <input type="text" name="name" size="30" maxlength="50" required></label><br> 
+      <!-- type類型，maxlength最多可輸入的，required必填欄位 -->
+      <label>信箱: <input type="email" name="email" size="30" maxlength="50" required></label><br> 
+      <p>
+        <label for="hear-about">您從哪裡得知我們?</label>
+        <select name="hear" id="hear-about">
+          <option value="web">網頁</option> <!-- //select下拉式選單的選項 -->
+          <option value="friend">朋友</option>
+          <option value="shop">店面</option>
+          <option value="other">其他</option>
+        </select>
+      </p>
+      <p>
+        是否再度光臨?<br>
+        <label><input type="radio" name="comeback" value="yes" />會</label> 
+        <label><input type="radio" name="comeback" value="no" />不會</label>
+        <label><input type="radio" name="comeback" value="maybe" />或許</label>
+      </p>
+        <label for="comments">寶貴意見:</label><br>
+        <textarea rows="4" cols="40" id="comments"></textarea><br>
+      <label><input type="checkbox" name="subscribe" checked="checked" />是否訂閱最新消息</label><br> <!-- checked是否勾選此欄位(radio也適用) -->
+      <label>您的服務滿意程度<input type="number" min="1" max="5" step="1" value="5"></input></label><br> <!-- min最小數值，max最大數值，step每次只增加1，value設定此欄位數值為5 -->
+      <input type="submit" value="送出" /> 
+    </fieldset><br>
+  </form>
+</body>
+</html>

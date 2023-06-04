@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML4</title>
+  <style>
+    :target {
+      border: 2px solid #D4D4D4;
+      background-color: #71BA51;
+    }
+    .block{
+      border: 1px solid black;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://w3.nknu.edu.tw/zh/">國立高雄師範大學</a><br> <!-- 頁面連結至至學校首頁 -->
+  <a href="https://www.google.com.tw/" target="_blank">Google搜尋</a><br> <!-- 在新頁面開啟Google搜尋 -->
+  <a href="mailto:hello@example.com">寄送信件</a><br> <!-- 開啟預設郵件軟體進行寄信 -->
+  <a href="images/html.png" title="下載連結" download> <!-- 以圖片當作超連結 -->
+    <img src="images/html.png">
+  <a>
+
+  <ul>
+    <li><a href="href/A.html">A頁面</a></li> <!-- 連結本地href目錄下的頁面 -->
+    <li><a href="href/B.html">B頁面</a></li>
+    <li><a href="href/C.html">C頁面</a></li>
+  </ul>
+
+  <a href="#first">連結1</a> <!-- 畫面鎖定至ID first -->
+  <a href="#second">連結2</a>
+
+  <div id="first" class="block">目的1</div>
+  <div id="second" class="block">目的2</div>
+</body>
+</html>

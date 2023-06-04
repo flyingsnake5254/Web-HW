@@ -1,0 +1,54 @@
+/* body {
+    background-image: url(form_bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+} */
+
+/* html, body {
+    margin: 0;
+    padding: 0;
+}
+#vanta-bg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+} */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.div_buttons {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.button_style {
+    margin: 30px;
+}
+
+.font_style {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    letter-spacing: 5px;
+    word-spacing: 6px;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 50px;
+}
